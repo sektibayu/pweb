@@ -8,7 +8,7 @@ class C_admin extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_user');
         $this->load->helper(array('url','form'));
-        $this->load->library(array('form_validation','pagination'));
+        // $this->load->library(array('form_validation','pagination'));
 	}
 
 	// public function index()
@@ -59,7 +59,7 @@ class C_admin extends CI_Controller {
             // 'id_user' => $this->input->post('id_user'),
             // 'password' => $this->input->post('password'),
             // 'nama' => $this->input->post('nama'),
-            'rule' => $this->input->post('rule')
+            'role' => $this->input->post('role')
             // 'alamat' => $this->input->post('alamat')
             );
         $this->M_user->update_data($data,$id); 
@@ -88,5 +88,9 @@ class C_admin extends CI_Controller {
         $this->load->view('admin/V_sidebar');
         $this->load->view('admin/V_asli');
         $this->load->view('template/V_footer'); 
+    }
+
+    public function login(){
+        
     }
 }

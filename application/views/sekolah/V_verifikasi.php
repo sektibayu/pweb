@@ -19,7 +19,18 @@
 						    </thead>
 						    <tbody>
 						    <tr>
-						    	<?php echo "<td></td>"; ?>
+						    	<?php foreach ($siswas as $siswa)
+							{ ?>
+						    	<tr>
+									<td> <?php echo $siswa->id_user ?></td>
+									<td> <?php echo $siswa->nama ?></td>
+									<td> <?php echo $siswa->alamat ?></td>
+									<td> <?php echo $siswa->indonesia ?></td>
+									<td> <?php echo $siswa->ipa ?></td>
+									<td> <?php echo $siswa->matematika ?></td>
+									<td> </td>
+								</tr>
+						    	<?php } ?>
 						    </tr>
 						    </tbody>
 						</table>

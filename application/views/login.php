@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Forms</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/datepicker3.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/css/datepicker3.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/css/styles.css">
+
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
@@ -23,10 +24,10 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Log in</div>
 				<div class="panel-body">
-					<form role="form">
+					<form role="form" action="<?php echo site_url('C_auth/login')?>" method="post">
 						<fieldset>
 							<div class="form-group">
-								<input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
+								<input class="form-control" placeholder="User Id" name="id_user" type="text" autofocus="">
 							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="Password" name="password" type="password" value="">
@@ -36,7 +37,7 @@
 									<input name="remember" type="checkbox" value="Remember Me">Remember Me
 								</label>
 							</div>
-							<a href="index.html" class="btn btn-primary">Login</a>
+							<button type="submit" class="btn btn-primary">Login</button>
 						</fieldset>
 					</form>
 				</div>
@@ -44,15 +45,14 @@
 		</div><!-- /.col-->
 	</div><!-- /.row -->	
 	
-		
-
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+	
+	<script src="<?php echo base_url('assets'); ?>/js/jquery-1.11.1.min.js"></script>
+	<script src="<?php echo base_url('assets'); ?>/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url('assets'); ?>/js/chart.min.js"></script>
+	<script src="<?php echo base_url('assets'); ?>/js/chart-data.js"></script>
+	<script src="<?php echo base_url('assets'); ?>/js/easypiechart.js"></script>
+	<script src="<?php echo base_url('assets'); ?>/js/easypiechart-data.js"></script>
+	<script src="<?php echo base_url('assets'); ?>/js/bootstrap-datepicker.js"></script>
 	<script>
 		!function ($) {
 			$(document).on("click","ul.nav li.parent > a > span.icon", function(){		  
