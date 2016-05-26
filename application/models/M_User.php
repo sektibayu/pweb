@@ -19,6 +19,21 @@ class M_User extends CI_Model {
 		return $hasil->row();
 	}
 
+	// public function get_sekolah()
+	// {
+	// 	$result = $this->db->get('nama_sekolah');
+
+	// 	$dd[''] = 'Please Select';
+	// 	if ($result->num_rows() > 0)
+	// 	{
+	// 		foreach ($result->result => $row) 
+	// 		{
+	// 			$dd[$row->id_sekolah] = $row->nama_sekolah;
+	// 		}
+	// 	}
+	// 	return $dd;
+	}
+
 	public function delete($id){
 		$this->db->delete('user',array('id_user'=> $id));
 	}

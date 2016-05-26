@@ -6,18 +6,34 @@ class C_siswa extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('M_Sekolah');
+        $this->load->helper(array('url','form','form_helper'));
+        $this->load->library(array('form_validation','pagination'));
     }
 
     public function index(){
-        $data['sekolahs']=$this->M_Sekolah->getAll();
+        // $data['sekolahs']=$this->M_Sekolah->getAll();
         $this->load->view('template/V_header');
         $this->load->view('siswa/V_sidebar');
-        // $this->load->view('siswa/V_Index');
+        $this->load->view('siswa/V_Index');
         $this->load->view('template/V_footer');
     }
 
-    public function pengumuman(){
+    public function pendaftaran()
+    {
+        
 
+        $this->load->view('template/V_header');
+        $this->load->view('siswa/V_sidebar');
+        $this->load->view('siswa/V_daftar');
+        $this->load->view('template/V_footer');   
+    }
+
+    public function pengumuman()
+    {
+        $this->load->view('template/V_header');
+        $this->load->view('siswa/V_sidebar');
+        $this->load->view('siswa/V_pengumuman');
+        $this->load->view('template/V_footer');
     }
 
     public function cetak_daftar(){
