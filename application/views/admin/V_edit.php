@@ -1,22 +1,3 @@
-		<!-- <table border="1">
-			<tr>
-				<th>id_user</th>
-				<th>nama</th>
-				<th>rule</th>
-			</tr>
-
-			<?php foreach ($nama_users as $nama_user)
-			{ ?>
-				<tr>
-					<td> <?php echo $nama_user->id_user ?></td>
-					<td> <?php echo $nama_user->nama ?></td>
-					<td> <?php echo $nama_user->rule ?></td>
-				</tr>
-			<?php } ?>
-		</table> -->
-								
-		
-					
 		
 			
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">					 
@@ -44,7 +25,7 @@
 						    <tr>
 						        <th class="text-center" data-sortable="true" >ID User</th>
 						        <th class="text-center" data-sortable="true">Nama</th>
-						        <th class="text-center"  data-sortable="true">Rule</th>
+						        <th class="text-center"  data-sortable="true">Role</th>
 						        <th class="text-center"  data-sortable="true">Aksi</th>
 						    </tr>
 						    </thead>
@@ -54,7 +35,7 @@
 								<tr>
 									<td> <?php echo $nama_user->id_user ?></td>
 									<td> <?php echo $nama_user->nama ?></td>
-									<td> <?php echo $nama_user->rule ?></td>
+									<td> <?php echo $nama_user->role ?></td>
 
 									<td>
 						    		<a href="<?php echo site_url('C_admin/update2').'/'.$nama_user->id_user?>" class="btn btn-primary btn-xs"title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>

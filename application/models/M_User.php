@@ -43,16 +43,23 @@ class M_User extends CI_Model {
         return true;        
     }
 
-    function update_data($data,$id) {
+    public function update_data($data,$id) {
         $this->db->where('id_user',$id);
         $this->db->update('user', $data);
         return true;        
     }
 
-    function siswaAll(){
+    public function siswaAll(){
     	$this->db->select('*');
         $this->db->from('user u'); 
-        $this->db->join('nilai n', 'u.id_user=n.id_user', 'left');      
-        $query = $this->db->get(); 
+        $this->db->join('nilai n', 'u.id_user=n.id_user', 'left');
+        $this->db->where('role','2');     
+        $query = $this->db->get();
+        return $query->result(); 
+    }
+
+    public function login($id_user,$password){
+    	$query=$this->db->get_where('user',array('id_user'=>$id_user,'password'=>$password));	
+		return $query->row();
     }
 }

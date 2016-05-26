@@ -6,8 +6,12 @@ class C_siswa extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('M_Sekolah');
+
         $this->load->helper(array('url','form','form_helper'));
         $this->load->library(array('form_validation','pagination'));
+
+        $this->load->helper(array('url','form'));
+
     }
 
     public function index(){

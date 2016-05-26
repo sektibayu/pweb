@@ -7,6 +7,8 @@ class C_sekolah extends CI_Controller{
         parent::__construct();
         $this->load->model('M_Sekolah');
         $this->load->model('M_User');
+        $this->load->helper(array('url','form'));
+        // $this->load->library(array('form_validation','pagination'));
     }
 
     public function index(){
@@ -18,9 +20,10 @@ class C_sekolah extends CI_Controller{
     }
 
     public function verifikasi(){
+    	$data['siswas']=$this->M_User->siswaAll();
     	$this->load->view('template/V_header');
         $this->load->view('sekolah/V_sidebar');
-        $this->load->view('sekolah/V_verifikasi');
+        $this->load->view('sekolah/V_verifikasi',$data);
         $this->load->view('template/V_footer');
     }
 
