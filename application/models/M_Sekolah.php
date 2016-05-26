@@ -10,6 +10,7 @@ class M_Sekolah extends CI_Model {
 
 	public function getAll(){
 		$query = $this->db->get('sekolah')->result();
+		// print_r($query);
 		return $query;
 	}
 	

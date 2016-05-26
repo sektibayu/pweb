@@ -24,11 +24,11 @@ class C_siswa extends CI_Controller{
 
     public function pendaftaran()
     {
-        
-
+        $data['sekolahs']=$this->M_Sekolah->getAll();
+        // print_r($data);
         $this->load->view('template/V_header');
         $this->load->view('siswa/V_sidebar');
-        $this->load->view('siswa/V_daftar');
+        $this->load->view('siswa/V_daftar',$data);
         $this->load->view('template/V_footer');   
     }
 

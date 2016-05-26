@@ -19,11 +19,19 @@
 					<div class="panel-heading">Form Elements</div>
 					<div class="panel-body">
 						<div class="col-md-6">
-							<form role="form">
+							<form action = "<?php echo site_url("C_Siswa/pendaftaran")?>" role="form" method="post">
 							
 								<div class="form-group">
 									<label>Pilih Sekolah</label>
-									<input class="form-control" placeholder="Pilih Sekolah">
+									<select class="form-control">
+										print_r ($sekolahs);
+
+										<?php foreach ($sekolahs as $sekolah)
+										{ ?>
+											
+											<option value="<?php echo $sekolah->id_sekolah ?>"><?php echo $sekolah->nama_sekolah ?></option>	
+										<?php } ?>
+									</select>
 								</div>
 
 
